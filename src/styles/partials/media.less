@@ -111,3 +111,90 @@
   }
 
 }
+
+@media all and (max-width: 480px) {
+  .hidden-mobile {
+    display: none;
+  }
+  .m-container {
+    padding: 0 15px;
+  }
+  .main-title {
+    padding-top: 42px;
+    font-size: 36px;
+  }
+  .main-subtitle {
+    margin-top: 0;
+    background: transparent url("../img/rolonobackgr-copy-2.png") center top no-repeat;
+    p {
+      padding-top: 143px;
+      font-size: 15px;
+      margin-bottom: 24px;
+    }
+  }
+  .input-subscribe {
+    input[type="email"] {
+      font-size: 15px;
+    }
+    input[type="submit"] {
+      font-size: 15px;
+    }
+    span.input-subscribe {
+      font-size: 12px;
+    }
+  }
+  main {
+    margin-top: 50px;
+    .content-title {
+      h2 {
+        font-size: 24px;
+      }
+      margin-bottom: 24px;
+    }
+    article {
+      .article-title {
+        a {
+          font-size: 16px;
+        }
+        span {
+          font-size: 16px;
+        }
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+    .article-quote {
+      max-width: 100%;
+      .article-quote-title {
+        font-size: 12px;
+      }
+      .article-quote-text {
+        font-size: 16px;
+        &::before {
+          font-size: 30px;
+          line-height: 30px;
+        }
+      }
+      .article-quote-subtitle {
+        font-size: 12px;
+      }
+    }
+  }
+
+  footer {
+    margin-top: 184px;
+    padding-top: 16px;
+    padding-bottom: 29px;
+    .subscribe-block {
+      h3 {
+        font-size: 24px;
+      }
+    }
+    .credits-block {
+      padding-top: 24px;
+      font-size: 12px;
+    }
+  }
+
+}
