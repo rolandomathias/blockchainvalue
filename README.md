@@ -12,7 +12,7 @@
 * Open console and navigate to repository directory
 * Run `npm install`
 * Run `bower install`
-* Run `npm install --global gulp`
+* Run `npm install --global gulp` ( in case of error run `sudo npm install --global gulp` instead )
 
 # Project structure
 
@@ -24,6 +24,11 @@ something was modified in `src` folder.
 
 # Building a project
 
+After you made some changes it's necessary to "build" the project - "gulp" script will
+pre-process, minify, optimize, etc all your files from source directory and produce
+ready to upload version into `docs` folder.
+
+* Navigate to repository directory
 * Run `gulp` ( this will build everything into `docs` folder )
 * Run `gulp post-inline` ( this will make last-pass optimisations in `docs` folder )
 
@@ -32,5 +37,5 @@ something was modified in `src` folder.
 To upload changes to GitHub just commit and push your modifications to remote repository,
 in GitHub desktop you can do it in two simple steps:
 
-* Enter some commit message for your changeset and press "Commit"
+* Enter some commit message for your change-set and press "Commit"
 * Press "Sync"
