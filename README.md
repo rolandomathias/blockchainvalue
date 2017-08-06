@@ -8,6 +8,8 @@
 
 # Installation
 
+Steps below should be followed once - when you setup files for local development:
+
 * Clone this repository ( easiest way is to use [GitHub Desktop](https://desktop.github.com/) )
 * Open console and navigate to repository directory
 * Run `npm install`
