@@ -26,4 +26,9 @@ $(function(){
        });
     });
 
+    $('.article-title').click(function(e){
+       $(this).toggleClass('expanded');
+       e.preventDefault();
+    });
+
 });

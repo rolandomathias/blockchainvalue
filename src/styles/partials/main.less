@@ -119,10 +119,11 @@ main {
         .muted-title-text();
       }
       svg {
-        margin-left: 3px;
+        margin-left: 5px;
         fill: @black;
-        width: 12px;
+        width: 18px;
         height: 12px;
+        position: relative;
       }
       a {
         .muted-title-bold();
@@ -132,8 +133,42 @@ main {
         }
         &:hover + svg {
           fill: @navy;
-          width: 15px;
-          height: 15px;
+          top: 1px;
+        }
+      }
+      &.expanded {
+        a + svg {
+          transform: rotate(180deg);
+        }
+      }
+      &.expanded + .expand-section {
+          display: block;
+      }
+    }
+
+    .expand-section {
+      display: none;
+      padding-top: 16px;
+      max-width: 790px;
+      a {
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        line-height: 1.4;
+        display: block;
+        margin-bottom: 8px;
+        color: @navy;
+        font-style: italic;
+        text-decoration: none;
+        b {
+          color: @navy;
+          font-style: normal;
+        }
+        svg {
+          fill: @navy;
+          margin-left: 3px;
+        }
+        span {
+          white-space: nowrap;
         }
       }
     }
@@ -141,6 +176,7 @@ main {
     p {
       .text();
       display: block;
+      max-width: 553px;
     }
 
     .article-quote {
