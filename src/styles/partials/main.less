@@ -114,35 +114,62 @@ main {
     margin-bottom: 16px;
 
     .article-title {
+      cursor: pointer;
       span {
         .muted-title-text();
       }
       svg {
-        margin-left: 5px;
-        fill: @black;
-        width: 18px;
-        height: 12px;
+        margin-left: 2px;
+        width: 14px;
+        height: 10px;
         position: relative;
+        stroke: @slate-grey;
+        top: 1px;
       }
       a {
         .muted-title-bold();
         font-weight: 600;
-        &:hover {
-          color: @navy;
-        }
-        &:hover + svg {
+        /*&:hover + svg {
           fill: @navy;
           top: 1px;
-        }
+        }*/
+      }
+      .expand-text {
+        text-decoration: none;
+        font-size: 14px;
+        color: @slate-grey;
+        line-height: 19.6px;
+        display: inline-block;
+        margin-left: 5px;
       }
       &.expanded {
-        a + svg {
+        a + span + svg {
           transform: rotate(180deg);
         }
       }
       &.expanded + .expand-section {
           display: block;
       }
+
+      &:hover {
+        a {
+          color: @navy;
+        }
+        .expand-text {
+          text-decoration: none;
+          font-size: 14px;
+          color: @navy;
+          font-weight: bold;
+          line-height: 19.6px;
+          display: inline-block;
+          margin-left: 5px;
+        }
+        svg {
+          stroke: @navy;
+          stroke-width: 3px;
+        }
+      }
+
     }
 
     .expand-section {
