@@ -115,9 +115,11 @@ main {
 
     .article-title {
       cursor: pointer;
+
       span {
         .muted-title-text();
       }
+
       svg {
         margin-left: 2px;
         width: 14px;
@@ -126,14 +128,12 @@ main {
         stroke: @slate-grey;
         top: 1px;
       }
+
       a {
         .muted-title-bold();
         font-weight: 600;
-        /*&:hover + svg {
-          fill: @navy;
-          top: 1px;
-        }*/
       }
+
       .expand-text {
         text-decoration: none;
         font-size: 14px;
@@ -141,33 +141,43 @@ main {
         line-height: 19.6px;
         display: inline-block;
         margin-left: 5px;
+        &::after {
+          content: "expand";
+          display: inline;
+        }
       }
+
       &.expanded {
         a + span + svg {
           transform: rotate(180deg);
         }
+        .expand-text {
+          &::after {
+            content: "collapse";
+          }
+        }
       }
+
       &.expanded + .expand-section {
           display: block;
       }
 
       &:hover {
+
         a {
           color: @navy;
         }
+
         .expand-text {
-          text-decoration: none;
-          font-size: 14px;
           color: @navy;
           font-weight: bold;
-          line-height: 19.6px;
-          display: inline-block;
-          margin-left: 5px;
         }
+
         svg {
           stroke: @navy;
           stroke-width: 3px;
         }
+
       }
 
     }
@@ -182,12 +192,13 @@ main {
         line-height: 1.4;
         display: block;
         margin-bottom: 8px;
-        color: @navy;
+        color: @black;
         font-style: italic;
         text-decoration: none;
         b {
-          color: @navy;
+          color: @black;
           font-style: normal;
+          font-weight: 500;
         }
         svg {
           fill: @navy;
@@ -200,6 +211,7 @@ main {
         &:hover {
           b {
             text-decoration: underline;
+            color: @navy;
           }
         }
       }
