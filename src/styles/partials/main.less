@@ -31,6 +31,7 @@ header {
   p {
     .text-lead();
     padding-top: 100px;
+    margin-bottom: 40px;
   }
   .img-shadowed {
     position: relative;
@@ -111,7 +112,7 @@ main {
 
   article {
 
-    margin-bottom: 16px;
+    margin-bottom: 24px;
 
     .article-title {
       cursor: pointer;
@@ -162,6 +163,14 @@ main {
           display: block;
       }
 
+      &.expanded + .expand-section + .summary-title + p {
+        margin-top: 7px;
+      }
+
+      &.expanded + .expand-section + .summary-title {
+        display: block;
+      }
+
       &:hover {
 
         a {
@@ -182,10 +191,25 @@ main {
 
     }
 
+    .summary-title {
+      .quote-title();
+      text-transform: uppercase;
+      margin-bottom: 0;
+      margin-top: 18px;
+      display: none;
+    }
+
     .expand-section {
       display: none;
       padding-top: 16px;
       max-width: 790px;
+
+      .expand-section-title {
+        .quote-title();
+        text-transform: uppercase;
+        margin-bottom: 7px;
+      }
+
       a {
         font-family: "Roboto", sans-serif;
         font-size: 18px;
@@ -268,9 +292,9 @@ main {
 }
 
 footer {
-  margin-top: 157px;
+  margin-top: 280px;
   padding-top: 42px;
-  padding-bottom: 58px;
+  padding-bottom: 60px;
 
   border-top: 2px solid @navy;
 
